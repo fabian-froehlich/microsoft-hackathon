@@ -1,0 +1,17 @@
+<div id="menu">
+	<div class="panel list-group">
+		 <div class="list-group-item">{{modelInstance.article.title}}<a href="{{modelInstance.article.link}}"><span style="float:right"class="glyphicon glyphicon-link"></span></a></div>
+		 <div class="list-group-item">
+	 	 	<span onclick={{action 'toggleCollapse'}} style="cursor:pointer">
+			 	{{#bs-collapse collapsed=collapsed style="position:relative"}}
+					{{modelInstance.article.description}}<br>
+					{{modelInstance.article.summary}}<br>
+					<div class="collapse-gradient">
+						<!-- gradient -->
+					</div>
+				{{/bs-collapse}}
+			</span>
+	
+		 </div>
+	</div>
+</div>

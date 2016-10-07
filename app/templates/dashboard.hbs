@@ -1,0 +1,9 @@
+{{outlet}}
+<div class="form-group">
+  <label for="usr">Search Term:</label>
+  <input type="text" class="form-control" id="search-term" value="Example">
+</div>
+  <label for="usr">Output</label>
+{{#each model as |input|}}
+	{{article-preview modelInstance=input}}
+{{/each}}
