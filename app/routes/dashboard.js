@@ -82,7 +82,7 @@ export default Ember.Route.extend({
 			      author: 'Max Musterfrau',
 			      comments: null,
 			      origlink: null,
-			      image: { url: 'http://example.com/image.jpg' },
+			      image: {},
 			      source: {},
 			      categories: [],
 			    } 
@@ -110,7 +110,7 @@ export default Ember.Route.extend({
 			      author: 'Max Musterfrau',
 			      comments: null,
 			      origlink: null,
-			      image: { url: 'http://example.com/image.jpg' },
+			      image: {},
 			      source: {},
 			      categories: [],
 			    } 
