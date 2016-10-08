@@ -1,30 +1,32 @@
 <div id="menu">
-	<div class="panel list-group">
-		 <a href="{{modelInstance.article.link}}" style="text-decoration: none;">
-		 	<div class="list-group-item">{{modelInstance.article.title}}
-		 	<span style="float:left"class="glyphicon glyphicon-link"></span>
-			 	{{#if modelInstance.article.image.url}}
-		 		<img src="{{modelInstance.article.image.url}}" class="img-thumbnail">
-				{{else}}
- 				<img src="http://www.85percent.co.uk/wp-content/uploads/2015/08/default-placeholder-1024x1024-570x321.png" class="img-thumbnail">
-				{{/if}}
-		 	</div>
-		 </a>
-
-		 <div class="list-group-item">
-	 	 	<span onclick={{action 'toggleCollapse'}} style="cursor:pointer">
-			 	{{#bs-collapse collapsed=collapsed style="position:relative"}}
-			 	{{#if modelInstance.article.description}}
-  					{{modelInstance.article.description}}
-				{{else}}
- 				 	{{modelInstance.article.summary}}
-				{{/if}}
-				<div class="collapse-gradient">
-					<!-- gradient -->
-				</div>
-				{{/bs-collapse}}
-			</span>
-	
-		 </div>
+	<div class="list-group row">
+		<div class="col-xs-1">
+		{{#if modelInstance.article.image.url}}
+			<img src="{{modelInstance.article.image.url}}" class="img-thumbnail">
+		{{else}}
+		 	<img src="http://www.85percent.co.uk/wp-content/uploads/2015/08/default-placeholder-1024x1024-570x321.png" class="img-thumbnail">
+		{{/if}}
+		</div>
+		<div class="col-xs-11">
+			<a href="{{modelInstance.article.link}}" style="text-decoration: none;">
+			 	<div class="list-group-item" syle="height:100px">{{modelInstance.article.title}}
+				 	<span style="float:left"class="glyphicon glyphicon-link"></span>
+			 	</div>
+			</a>
+			 <div class="list-group-item">
+		 	 	<span onclick={{action 'toggleCollapse'}} style="cursor:pointer">
+				 	{{#bs-collapse collapsed=collapsed style="position:relative"}}
+				 	{{#if modelInstance.article.description}}
+	  					{{modelInstance.article.description}}
+					{{else}}
+	 				 	{{modelInstance.article.summary}}
+					{{/if}}
+					<div class="collapse-gradient">
+						<!-- gradient -->
+					</div>
+					{{/bs-collapse}}
+				</span>
+			 </div>
+		</div>
 	</div>
 </div>
